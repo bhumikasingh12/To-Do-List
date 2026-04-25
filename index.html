@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="sidebar-logo">✦</div>
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-filter="all">All</button>
+        <button class="nav-item" data-filter="active">Active</button>
+        <button class="nav-item" data-filter="done">Done</button>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="clear-done">Clear done</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <p class="header-date" id="date-label"></p>
+        <h1 class="header-title">My <em>Tasks</em></h1>
+        <div class="progress-row">
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progress-fill"></div>
+          </div>
+          <span class="progress-label" id="progress-label">0 / 0 done</span>
+        </div>
+      </header>
+
+      <div class="input-row">
+        <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off" />
+        <button id="add-btn">Add</button>
+      </div>
+
+      <ul class="task-list" id="task-list"></ul>
+
+      <div class="empty-state hidden" id="empty-state">
+        <span class="empty-icon">◌</span>
+        <p id="empty-msg">Nothing here yet. Add a task above.</p>
+      </div>
+    </main>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
